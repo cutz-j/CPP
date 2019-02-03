@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClCompile Include="ch_1.cpp" />
     <ClCompile Include="ch_1_test.cpp" />
+    <ClCompile Include="ch_2.cpp" />
     <ClCompile Include="OOP_1.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

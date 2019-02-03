@@ -65,7 +65,7 @@ void info(void) {
 }
 
 
-int main(void) {
+int oop_1_cpp(void) {
 	using namespace std;
 	while (1) {
 		cout << "1. °èÁÂ°³¼³" << endl;
