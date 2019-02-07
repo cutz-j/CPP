@@ -101,7 +101,7 @@ int q2_4_2(void) {
 	return 0;
 }
 
-int main(void) {
+int ch_2_cpp(void) {
 	//q2_1_1();
 	//q2_1_3();
 	//q2_2_1();
