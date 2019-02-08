@@ -56,7 +56,7 @@ int q3_2_2(void) {
 	return 0;
 }
 
-int main(void) {
+int ch_3_cpp(void) {
 	//q3_1_1();
 	//q3_2_1();
 	q3_2_2();
