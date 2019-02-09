@@ -27,6 +27,9 @@
     <ClInclude Include="Printer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="FruitSale.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -51,6 +54,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Printer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ch_4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="FruitSale.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
