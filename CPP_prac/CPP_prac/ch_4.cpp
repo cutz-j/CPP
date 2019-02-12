@@ -158,10 +158,15 @@ int q4_3_2(void) {
 	return 0;
 }
 
-int main(void) {
+int ch_4_cpp(void) {
 	//q4_1_1();
 	//q4_2_1();
 	//q4_3_1();
-	q4_3_2();
+	//q4_3_2();
+	int num = -7;
+	int *num1;
+	num1 = &num;
+	int &num2 = num;
+	std::cout << *num1 << &num2;
 	return 0;
 }
