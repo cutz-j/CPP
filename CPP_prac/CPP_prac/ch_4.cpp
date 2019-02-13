@@ -95,68 +95,68 @@ int q4_3_1(void) {
 	return 0;
 }
 
-namespace COMP_POS{
-	enum{CLERK, SENIOR, ASSIST, MANAGER};
-	void info(int num) {
-		using namespace std;
-		switch (num) {
-		case CLERK:
-			cout << "CLERK" << endl;
-			break;
-		case SENIOR:
-			cout << "SENIOR" << endl;
-			break;
-		case ASSIST:
-			cout << "ASSIST" << endl;
-			break;
-		case MANAGER:
-			cout << "MANAGER" << endl;
-			break;
-
-		}
-	}
-}
-
-class NameCard {
-private:
-	char *name;
-	char *company;
-	char *phone;
-	int position;
-
-public:
-	NameCard(const char *name_var, const char* company_var, const char* phone_var, const int position_var) : position(position_var) {
-		name = new char[strlen(name_var) + 1];
-		company = new char[strlen(company_var) + 1];
-		phone = new char[strlen(phone_var) + 1];
-		strcpy_s(name, strlen(name_var)+1, name_var);
-		strcpy_s(company, strlen(company_var)+1, company_var);
-		strcpy_s(phone, strlen(phone_var)+1, phone_var);
-	}
-
-	void ShowNameCardInfo() {
-		using namespace std;
-		cout << "이름: " << name << endl;
-		cout << "회사: " << company << endl;
-		cout << "전화번호: " << phone << endl;
-		cout << "직급: ";
-		COMP_POS::info(position);
-		cout << endl;
-
-	}
-
-
-};
-
-int q4_3_2(void) {
-	NameCard manClerk("Lee", "ABCEng", "010-1111-2222", COMP_POS::CLERK);
-	NameCard manSENIOR("Hong", "OrangeEng", "010-1111-2222", COMP_POS::SENIOR);
-	NameCard manASSIST("Kim", "SoGoodComp", "010-1111-2222", COMP_POS::ASSIST);
-	manClerk.ShowNameCardInfo();
-	manSENIOR.ShowNameCardInfo();
-	manASSIST.ShowNameCardInfo();
-	return 0;
-}
+//namespace COMP_POS{
+//	enum{CLERK, SENIOR, ASSIST, MANAGER};
+//	void info(int num) {
+//		using namespace std;
+//		switch (num) {
+//		case CLERK:
+//			cout << "CLERK" << endl;
+//			break;
+//		case SENIOR:
+//			cout << "SENIOR" << endl;
+//			break;
+//		case ASSIST:
+//			cout << "ASSIST" << endl;
+//			break;
+//		case MANAGER:
+//			cout << "MANAGER" << endl;
+//			break;
+//
+//		}
+//	}
+//}
+//
+//class NameCard {
+//private:
+//	char *name;
+//	char *company;
+//	char *phone;
+//	int position;
+//
+//public:
+//	NameCard(const char *name_var, const char* company_var, const char* phone_var, const int position_var) : position(position_var) {
+//		name = new char[strlen(name_var) + 1];
+//		company = new char[strlen(company_var) + 1];
+//		phone = new char[strlen(phone_var) + 1];
+//		strcpy_s(name, strlen(name_var)+1, name_var);
+//		strcpy_s(company, strlen(company_var)+1, company_var);
+//		strcpy_s(phone, strlen(phone_var)+1, phone_var);
+//	}
+//
+//	void ShowNameCardInfo() {
+//		using namespace std;
+//		cout << "이름: " << name << endl;
+//		cout << "회사: " << company << endl;
+//		cout << "전화번호: " << phone << endl;
+//		cout << "직급: ";
+//		COMP_POS::info(position);
+//		cout << endl;
+//
+//	}
+//
+//
+//};
+//
+//int q4_3_2(void) {
+//	NameCard manClerk("Lee", "ABCEng", "010-1111-2222", COMP_POS::CLERK);
+//	NameCard manSENIOR("Hong", "OrangeEng", "010-1111-2222", COMP_POS::SENIOR);
+//	NameCard manASSIST("Kim", "SoGoodComp", "010-1111-2222", COMP_POS::ASSIST);
+//	manClerk.ShowNameCardInfo();
+//	manSENIOR.ShowNameCardInfo();
+//	manASSIST.ShowNameCardInfo();
+//	return 0;
+//}
 
 int ch_4_cpp(void) {
 	//q4_1_1();
