@@ -27,7 +27,7 @@ public:
 		strcpy_s(name, strlen(copy.name) + 1, copy.name);
 	}
 
-	int getNum(void) {
+	int getNum(void) const {
 		return num;
 	}
 
@@ -42,7 +42,7 @@ public:
 		return money;
 	}
 
-	void ShowAccInfo() {
+	void ShowAccInfo() const {
 		std::cout << "°èÁÂID: " << num << std::endl;
 		std::cout << "ÀÌ ¸§: " << name << std::endl;
 		std::cout << "ÀÜ ¾×: " << balance << std::endl;
@@ -113,7 +113,7 @@ void info(void) {
 	}
 }
 
-int OOP_3(void) {
+int main(void) {
 	using namespace std;
 	while (1) {
 		cout << "1. °èÁÂ°³¼³" << endl;
