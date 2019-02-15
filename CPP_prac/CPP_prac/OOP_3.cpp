@@ -113,7 +113,7 @@ void info(void) {
 	}
 }
 
-int main(void) {
+int oop_3(void) {
 	using namespace std;
 	while (1) {
 		cout << "1. °èÁÂ°³¼³" << endl;
