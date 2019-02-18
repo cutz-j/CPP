@@ -167,7 +167,9 @@
     <ClCompile Include="ch_5.cpp" />
     <ClCompile Include="ch_6.cpp" />
     <ClCompile Include="ch_7.cpp" />
+    <ClCompile Include="ch_8.cpp" />
     <ClCompile Include="FruitSale.cpp" />
+    <ClCompile Include="OOP_5.cpp" />
     <ClCompile Include="OOP_1.cpp" />
     <ClCompile Include="OOP_2.cpp" />
     <ClCompile Include="OOP_3.cpp" />

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 
-#define LEN 20
+const int LEN = 20;
 
 namespace choice {
 	enum {
@@ -21,10 +21,10 @@ public:
 		strcpy_s(name, strlen(cus) + 1, cus);
 	}
 
-	Account(const Account &copy)
-		: num(copy.num), balance(copy.balance) {
-		name = new char[strlen(copy.name) + 1];
-		strcpy_s(name, strlen(copy.name) + 1, copy.name);
+	Account(const Account &ref)
+		: num(ref.num), balance(ref.balance) {
+		name = new char[strlen(ref.name) + 1];
+		strcpy_s(name, strlen(ref.name) + 1, ref.name);
 	}
 
 	int getNum(void) const {
@@ -49,28 +49,17 @@ public:
 	}
 
 	~Account() {
-		delete []name;
+		delete[]name;
 	}
 };
 
-
-Account * acc[100];
-int bank_num = 0;
-
 class AccountHandler {
 private:
-	Account * accArr[100];
-	int accNum;
+	Account * acc[100];
+	int bank_num = 0;
 public:
-	AccountHanlder();
-	void showMenu(void) const;
-	void make(void);
-	void deposit();
-	void withdraw();
-	void info() const;
-	~AccountHandler();
-
-	void showMenu() const {
+	void showMenu(void) const {
+		using namespace std;
 		cout << "1. 계좌개설" << endl;
 		cout << "2. 입 금" << endl;
 		cout << "3. 출 금" << endl;
@@ -93,11 +82,9 @@ public:
 		std::cin >> balance;
 		acc[bank_num] = new Account(id, balance, name);
 		bank_num++;
-		구조체 입력 후 배열에 저장 //
-
 	}
 
-	void deposit(void) {
+	void deposit_h(void) {
 		int num, money;
 		std::cout << "[입  금]" << std::endl;
 		std::cout << "계좌ID: ";
@@ -113,7 +100,7 @@ public:
 		std::cout << "입금 완료" << std::endl;
 	}
 
-	void withdraw(void) {
+	void withdraw_h(void) {
 		int num, money;
 		std::cout << "[출  금]" << std::endl;
 		std::cout << "계좌ID: ";
@@ -135,30 +122,28 @@ public:
 		}
 	}
 
-	~AccountHandler() {
-		delete[]accArr;
-	}
 };
 
-int main(void) {
+int oop_5(void) {
 	using namespace std;
 	AccountHandler manager;
+	int num;
 	while (1) {
 		manager.showMenu();
-		int num;
+		
 		cin >> num;
 		switch (num) {
 		case choice::MAKE:
-			make();
+			manager.make();
 			break;
 		case choice::DEPOSIT:
-			deposit();
+			manager.deposit_h();
 			break;
 		case choice::WITHDRAW:
-			withdraw();
+			manager.withdraw_h();
 			break;
 		case choice::INQUIRE:
-			info();
+			manager.info();
 			break;
 		case choice::EXIT:
 			cout << endl;
