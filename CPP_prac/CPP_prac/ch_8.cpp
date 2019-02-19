@@ -169,7 +169,7 @@ int q8_1_1() {
 }
 
 
-int main(void) {
+int ch_8_cpp(void) {
 	q8_1_1();
 
 	return 0;
