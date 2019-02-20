@@ -151,13 +151,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Account.h" />
+    <ClInclude Include="AccountHandler.h" />
+    <ClInclude Include="BankingCommonDecl.h" />
     <ClInclude Include="Calculator.h" />
     <ClInclude Include="ch1_test.h" />
     <ClInclude Include="FruitSale.h" />
+    <ClInclude Include="HighCreditAccount.h" />
+    <ClInclude Include="NormalAccount.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Printer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Account.cpp" />
+    <ClCompile Include="AccountHandler.cpp" />
+    <ClCompile Include="Bankmain.cpp" />
     <ClCompile Include="Calculator.cpp" />
     <ClCompile Include="ch_1.cpp" />
     <ClCompile Include="ch_1_test.cpp" />

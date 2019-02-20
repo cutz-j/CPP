@@ -30,6 +30,21 @@
     <ClInclude Include="FruitSale.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Account.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalAccount.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HighCreditAccount.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountHandler.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BankingCommonDecl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -84,6 +99,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="OOP_6.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Account.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountHandler.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Bankmain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
