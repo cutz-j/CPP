@@ -167,6 +167,7 @@
     <ClCompile Include="AccountHandler.cpp" />
     <ClCompile Include="Bankmain.cpp" />
     <ClCompile Include="Calculator.cpp" />
+    <ClCompile Include="ch_11.cpp" />
     <ClCompile Include="ch_1.cpp" />
     <ClCompile Include="ch_10.cpp" />
     <ClCompile Include="ch_1_test.cpp" />
