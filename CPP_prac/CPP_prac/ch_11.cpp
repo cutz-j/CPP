@@ -217,28 +217,29 @@ std::ostream& operator<<(std::ostream& os, const Point* pos) {
 
 class BoundCheck {
 private:
-	Point**arr;
+	int *arr;
 	int arrlen;
 	BoundCheck(const BoundCheck& arr) { }
 	BoundCheck& operator=(const BoundCheck& arr) { }
 
 public:
 	BoundCheck(int len) : arrlen(len) {
-		arr = new Point*[len];
+		arr = new int[len];
 	}
 
-	Point*& operator[] (int idx) {
+	int& operator[] (int idx) {
 		if (idx < 0 || idx >= arrlen) {
-			std::cout << "out of bound" << std::endl;
+			std::cout << arrlen << idx;
+			std::cout << "out of bound 1" << std::endl;
 			exit(1);
 		}
 		return arr[idx];
 	}
 
 
-	Point* operator[] (int idx) const {
+	int operator[] (int idx) const {
 		if (idx < 0 || idx >= arrlen) {
-			std::cout << "out of bound" << std::endl;
+			std::cout << "out of bound 2" << std::endl;
 			exit(1);
 		}
 		return arr[idx];
@@ -253,14 +254,44 @@ public:
 	}
 };
 
+class BoundCheck2D {
+private:
+	BoundCheck **arr;
+	int arrlen;
+	BoundCheck2D(const BoundCheck2D& arr) {}
+	BoundCheck2D& operator=(const BoundCheck2D& arr) {}
+
+public:
+	BoundCheck2D(int row, int col) : arrlen(col) {
+		arr = new BoundCheck*[row];
+		for (int i = 0; i < row; i++) {
+			arr[i] = new BoundCheck(col);
+		}
+	}
+
+	BoundCheck& operator[] (int num) {
+		if (num < 0 || num > arrlen) {
+			std::cout << "out of bounds 3" << std::endl;
+			exit(1);
+		}
+		return *(arr[num]);
+	}
+
+	~BoundCheck2D() {
+		for (int i = 0; i < arrlen; i++)
+			delete arr[i];
+		delete[]arr;
+	}
+
+};
+
 int q11_2_1() {
 	BoundCheck arr(3);
-	arr[0] = new Point(3, 4);
-	arr[1] = new Point(5, 6);
-	arr[2] = new Point(7, 8);
+	arr[0] = 0;
+	arr[1] = 1;
+	arr[2] = 2;
 
 	for (int i = 0; i < arr.GetArrLen(); i++) {
-		std::cout << *(arr[i]);
 		std::cout << " ";
 		std::cout << arr[i];
 		std::cout << std::endl;
@@ -269,10 +300,30 @@ int q11_2_1() {
 	return 0;
 }
 
+int q11_2_2() {
+	BoundCheck2D arr(3, 4);
+
+	for (int n = 0; n < 3; n++)
+		for (int m = 0; m < 4; m++)
+			arr[n][m] = n + m;
+
+	for (int n = 0; n < 3; n++) {
+		for (int m = 0; m < 4; m++) {
+			std::cout << arr[n][m] << ' ';
+		}
+		std::cout << std::endl;
+	}
+
+	return 0;
+}
+
 int main(void) {
 	//police_test();
 	//q11_1_2();
-	q11_2_1();
+	//q11_2_1();
+	//q11_2_2();
+	int *arr = new int[3];
+	std::cout << *arr;
 
 	return 0;
 }
