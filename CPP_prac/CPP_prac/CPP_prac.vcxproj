@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="AccountArray.h" />
     <ClInclude Include="AccountHandler.h" />
     <ClInclude Include="BankingCommonDecl.h" />
     <ClInclude Include="Calculator.h" />
@@ -164,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="AccountArray.cpp" />
     <ClCompile Include="AccountHandler.cpp" />
     <ClCompile Include="Bankmain.cpp" />
     <ClCompile Include="Calculator.cpp" />

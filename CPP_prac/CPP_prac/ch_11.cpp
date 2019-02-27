@@ -317,7 +317,7 @@ int q11_2_2() {
 	return 0;
 }
 
-int main(void) {
+int ch_11_cpp(void) {
 	//police_test();
 	//q11_1_2();
 	//q11_2_1();

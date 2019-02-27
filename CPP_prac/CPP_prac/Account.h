@@ -12,6 +12,8 @@ public:
 
 	Account(const Account &ref);
 
+	Account& operator=(const Account& ref);
+
 	int getNum(void) const;
 
 	virtual void deposit(int money);

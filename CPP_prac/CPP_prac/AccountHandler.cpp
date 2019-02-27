@@ -3,6 +3,7 @@
 #include "BankingCommonDecl.h"
 #include "HighCreditAccount.h"
 #include "NormalAccount.h"
+#include "AccountArray.h"
 #include <iostream>
 #include <cstring>
 

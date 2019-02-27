@@ -14,6 +14,16 @@ Account::Account(const Account &ref)
 	strcpy_s(name, strlen(ref.name) + 1, ref.name);
 }
 
+Account& Account::operator=(const Account& ref) {
+	num = ref.num;
+	balance = ref.balance;
+
+	delete[]name;
+	name = new char[strlen(ref.name) + 1];
+	strcpy_s(name, strlen(ref.name) + 1, ref.name);
+	return *this;
+}
+
 int Account::getNum(void) const {
 	return num;
 }
