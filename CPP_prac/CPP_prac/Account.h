@@ -1,18 +1,20 @@
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
 
+#include "Str.h"
+
 class Account {
 private:
 	int num;
-	char * name;
+	Str name;
 	int balance;
 
 public:
-	Account(int n, int b, const char *cus);
+	Account(int n, int b, Str cus);
 
-	Account(const Account &ref);
+	//Account(const Account &ref);
 
-	Account& operator=(const Account& ref);
+	//Account& operator=(const Account& ref);
 
 	int getNum(void) const;
 
@@ -21,8 +23,6 @@ public:
 	int withdraw(int money);
 
 	void ShowAccInfo() const;
-
-	~Account();
 };
 
 #endif
