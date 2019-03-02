@@ -162,7 +162,6 @@
     <ClInclude Include="NormalAccount.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Printer.h" />
-    <ClInclude Include="Str.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
@@ -195,7 +194,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Printer.cpp" />
-    <ClCompile Include="Str.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

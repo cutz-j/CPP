@@ -24,7 +24,6 @@ public:
 
 	void info(void) const;
 
-	~AccountHandler();
 };
 
 

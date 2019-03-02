@@ -1,8 +1,11 @@
-#include "BankingCommonDecl.h"
 #include "AccountHandler.h"
-#include "NormalAccount.h"
+#include "Account.h"
+#include "BankingCommonDecl.h"
 #include "HighCreditAccount.h"
-#include "Str.h"
+#include "NormalAccount.h"
+#include "AccountArray.h"
+#include <iostream>
+#include <cstring>
 
 
 void AccountHandler::showMenu(void) const {
@@ -32,27 +35,27 @@ void AccountHandler::make_choice(void) {
 }
 
 void AccountHandler::normal_make(void) {
-	int id;
-	Str name;
-	int balance;
-	int interest;
+int id;
+char name[LEN];
+int balance;
+int interest;
 
-	std::cout << "[보통예금계좌 개설]" << std::endl;
-	std::cout << "계좌ID: ";
-	std::cin >> id;
-	std::cout << "이 름: ";
-	std::cin >> name;
-	std::cout << "입금액: ";
-	std::cin >> balance;
-	std::cout << "이자율: ";
-	std::cin >> interest;
-	acc[bank_num] = new NormalAccount(id, balance, name, interest);
-	bank_num++;
+std::cout << "[보통예금계좌 개설]" << std::endl;
+std::cout << "계좌ID: ";
+std::cin >> id;
+std::cout << "이 름: ";
+std::cin >> name;
+std::cout << "입금액: ";
+std::cin >> balance;
+std::cout << "이자율: ";
+std::cin >> interest;
+acc[bank_num] = new NormalAccount(id, balance, name, interest);
+bank_num++;
 }
 
 void AccountHandler::credit_make(void) {
 	int id;
-	Str name;
+	char name[LEN];
 	int balance;
 	int interest;
 	int level;
@@ -118,9 +121,4 @@ void AccountHandler::info(void) const {
 	for (int i = 0; i < bank_num; i++) {
 		acc[i]->ShowAccInfo();
 	}
-}
-
-AccountHandler::~AccountHandler() {
-	for (int i = 0; i < bank_num; i++)
-		delete acc[i];
 }
