@@ -1,9 +1,10 @@
 #include "BankingCommonDecl.h"
 #include "Account.h"
-
+#include <iostream>
 
 Account::Account(int n, int b, Str cus) : num(n), balance(b) {
 	name = cus;
+	//std::cout << name << std::endl;
 }
 
 int Account::getNum(void) const {

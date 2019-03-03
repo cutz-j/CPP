@@ -19,7 +19,7 @@ public:
 	bool operator== (const Str& str1);
 
 	friend std::ostream& operator<< (std::ostream& os, const Str& st);
-	friend std::istream& operator>> (std::istream& is, const Str& st);
+	friend std::istream& operator>> (std::istream& is, Str& st);
 
 };
 

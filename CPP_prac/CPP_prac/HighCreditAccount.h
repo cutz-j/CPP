@@ -9,14 +9,9 @@ private:
 	int level;
 
 public:
-	CreditAccount(int n, int b, Str cus, int i, int l)
-		: NormalAccount(n, b, cus, i), level(l) {}
+	CreditAccount(int n, int b, Str cus, int i, int l);
 
-	virtual void deposit(int money) {
-		NormalAccount::deposit(money);
-		Account::deposit(money * (level / 100.0));
-	}
-
+	virtual void deposit(int money);
 };
 
 #endif

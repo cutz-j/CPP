@@ -1,4 +1,7 @@
 #include "Str.h"
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
 
 Str::Str() {
 	// 기본 생성자 //

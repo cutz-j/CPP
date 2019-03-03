@@ -1,5 +1,6 @@
 #ifndef __NORMAL_ACCOUNT_H__
 #define __NORMAL_ACCOUNT_H__
+
 #include "Account.h"
 #include "Str.h"
 
@@ -8,13 +9,9 @@ private:
 	int inter;
 
 public:
-	NormalAccount(int n, int b, Str cus, int i)
-		: Account(n, b, cus), inter(i) {}
+	NormalAccount(int n, int b, Str cus, int i);
 
-	virtual void deposit(int money) {
-		Account::deposit(money += (money * (inter / 100.0)));
-	}
+	virtual void deposit(int money);
 };
-
 
 #endif

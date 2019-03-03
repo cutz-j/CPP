@@ -3,6 +3,7 @@
 
 #include "Account.h"
 #include "AccountArray.h"
+#include "Str.h"
 
 class AccountHandler {
 private:
@@ -23,8 +24,6 @@ public:
 	void withdraw_h(void);
 
 	void info(void) const;
-
-	~AccountHandler();
 };
 
 

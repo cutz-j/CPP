@@ -2,7 +2,7 @@
 #include "AccountHandler.h"
 #include "NormalAccount.h"
 #include "HighCreditAccount.h"
-#include "Str.h"
+
 
 
 void AccountHandler::showMenu(void) const {
@@ -118,9 +118,4 @@ void AccountHandler::info(void) const {
 	for (int i = 0; i < bank_num; i++) {
 		acc[i]->ShowAccInfo();
 	}
-}
-
-AccountHandler::~AccountHandler() {
-	for (int i = 0; i < bank_num; i++)
-		delete acc[i];
 }

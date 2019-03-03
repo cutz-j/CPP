@@ -12,10 +12,6 @@ private:
 public:
 	Account(int n, int b, Str cus);
 
-	//Account(const Account &ref);
-
-	//Account& operator=(const Account& ref);
-
 	int getNum(void) const;
 
 	virtual void deposit(int money);
