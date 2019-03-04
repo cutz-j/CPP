@@ -1,11 +1,4 @@
-﻿  Account.cpp
-  AccountArray.cpp
-  AccountHandler.cpp
+﻿  AccountHandler.cpp
   Bankmain.cpp
-  HighCreditAccount.cpp
-c:\github\cpp\cpp_prac\cpp_prac\highcreditaccount.cpp(8): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  NormalAccoun.cpp
-c:\github\cpp\cpp_prac\cpp_prac\normalaccoun.cpp(8): warning C4244: '+=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Str.cpp
   코드를 생성하고 있습니다...
   CPP_prac.vcxproj -> C:\Github\CPP\CPP_prac\Debug\CPP_prac.exe

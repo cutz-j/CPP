@@ -155,6 +155,7 @@
     <ClInclude Include="AccountArray.h" />
     <ClInclude Include="AccountHandler.h" />
     <ClInclude Include="BankingCommonDecl.h" />
+    <ClInclude Include="BoundCheckArr.h" />
     <ClInclude Include="Calculator.h" />
     <ClInclude Include="ch1_test.h" />
     <ClInclude Include="FruitSale.h" />
@@ -174,6 +175,7 @@
     <ClCompile Include="ch_1.cpp" />
     <ClCompile Include="ch_10.cpp" />
     <ClCompile Include="ch_12.cpp" />
+    <ClCompile Include="ch_13.cpp" />
     <ClCompile Include="ch_1_test.cpp" />
     <ClCompile Include="ch_2.cpp" />
     <ClCompile Include="ch_3.cpp" />
