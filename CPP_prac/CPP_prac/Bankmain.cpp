@@ -2,7 +2,7 @@
 #include "BankingCommonDecl.h"
 
 
-int main(void) {
+int bank_main(void) {
 	using namespace std;
 	AccountHandler manager;
 	int num;
