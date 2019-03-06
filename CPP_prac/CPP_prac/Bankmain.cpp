@@ -1,7 +1,6 @@
 #include "AccountHandler.h"
 #include "BankingCommonDecl.h"
 
-
 int bank_main(void) {
 	using namespace std;
 	AccountHandler manager;

@@ -3,6 +3,7 @@
 
 #include "Account.h"
 #include "Str.h"
+#include "Exception.h"
 
 class NormalAccount : public Account {
 private:

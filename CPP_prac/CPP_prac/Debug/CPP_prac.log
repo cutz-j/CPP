@@ -1,4 +1,4 @@
 ﻿  AccountHandler.cpp
-  Bankmain.cpp
-  코드를 생성하고 있습니다...
+c:\github\cpp\cpp_prac\cpp_prac\accounthandler.cpp(103): warning C4101: 'exc' :참조되지 않은 지역 변수입니다.
+c:\github\cpp\cpp_prac\cpp_prac\accounthandler.cpp(129): warning C4101: 'exp' :참조되지 않은 지역 변수입니다.
   CPP_prac.vcxproj -> C:\Github\CPP\CPP_prac\Debug\CPP_prac.exe

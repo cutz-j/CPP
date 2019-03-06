@@ -1,6 +1,7 @@
 #include "BankingCommonDecl.h"
 #include "Account.h"
 #include <iostream>
+#include "Exception.h"
 
 Account::Account(int n, int b, Str cus) : num(n), balance(b) {
 	name = cus;
@@ -17,7 +18,7 @@ void Account::deposit(int money) {
 
 int Account::withdraw(int money) {
 	if (balance < money)
-		return 0;
+		throw OverException(money);
 	balance -= money;
 	return money;
 }

@@ -2,6 +2,7 @@
 #include "AccountHandler.h"
 #include "NormalAccount.h"
 #include "HighCreditAccount.h"
+#include "Exception.h"
 
 
 
@@ -36,7 +37,6 @@ void AccountHandler::normal_make(void) {
 	Str name;
 	int balance;
 	int interest;
-
 	std::cout << "[보통예금계좌 개설]" << std::endl;
 	std::cout << "계좌ID: ";
 	std::cin >> id;
@@ -87,11 +87,21 @@ void AccountHandler::deposit_h(void) {
 	std::cout << "[입  금]" << std::endl;
 	std::cout << "계좌ID: ";
 	std::cin >> num;
-	std::cout << "입금액: ";
-	std::cin >> money;
-	for (int i = 0; i < bank_num; i++) {
-		if (acc[i]->getNum() == num) {
-			acc[i]->deposit(money);
+	while (true) {
+		std::cout << "입금액: ";
+		std::cin >> money;
+		try {
+			for (int i = 0; i < bank_num; i++) {
+				if (acc[i]->getNum() == num) {
+					acc[i]->deposit(money);
+					return;
+				}
+			std::cout << "유효하지 않은 ID입니다." << std::endl << std::endl;
+			return;
+			}
+		}
+		catch (MinusException& exc) {
+			std::cout << "재입력" << std::endl;
 		}
 	}
 
@@ -103,11 +113,21 @@ void AccountHandler::withdraw_h(void) {
 	std::cout << "[출  금]" << std::endl;
 	std::cout << "계좌ID: ";
 	std::cin >> num;
-	std::cout << "출금액: ";
-	std::cin >> money;
-	for (int i = 0; i < bank_num; i++) {
-		if (acc[i]->getNum() == num) {
-			acc[i]->withdraw(money);
+	while (true) {
+		std::cout << "출금액: ";
+		std::cin >> money;
+		try {
+			for (int i = 0; i < bank_num; i++) {
+				if (acc[i]->getNum() == num) {
+					acc[i]->withdraw(money);
+					return;
+				}
+			}
+			std::cout << "유효하지 않은 ID입니다." << std::endl << std::endl;
+			return;
+		}
+		catch (OverException& exp) {
+			std::cout << "재입력" << std::endl;
 		}
 	}
 
